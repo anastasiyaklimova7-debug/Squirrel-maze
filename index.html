@@ -31,25 +31,26 @@
 
   .overlay{position:fixed;inset:0;background:rgba(60,35,15,.6);display:none;align-items:center;justify-content:center;z-index:10;padding:12px;overflow:auto}
   .overlay.show{display:flex}
-  .card{background:var(--card);color:var(--brown);border-radius:24px;padding:30px 34px;max-width:880px;width:100%;max-height:100%;overflow:auto;text-align:center;border:5px solid var(--wood);box-shadow:0 0 0 5px #f3c98d,0 20px 60px rgba(0,0,0,.45);animation:pop .25s ease-out}
+  .card{background:var(--card);color:var(--brown);border-radius:24px;padding:24px 28px;max-width:780px;width:100%;max-height:100%;overflow:auto;text-align:center;border:5px solid var(--wood);box-shadow:0 0 0 5px #f3c98d,0 20px 60px rgba(0,0,0,.45);animation:pop .25s ease-out}
   @keyframes pop{from{transform:scale(.88);opacity:0}to{transform:scale(1);opacity:1}}
   .card h2{margin:6px 0 8px;font-size:30px;color:#c4631a}
   .card p{margin:6px 0;font-size:18px;line-height:1.35}
   .card .ru{font-size:14px;opacity:.75}
   .rule{display:inline-block;text-align:left;background:#fff0d4;border:2px dashed var(--wood);border-radius:14px;padding:8px 16px;margin:6px 0;font-size:19px}
   .rule b.was{color:#c4631a}.rule b.were{color:#2f7d2a}
-  .big{border:0;border-radius:18px;padding:14px 38px;margin-top:16px;font-size:26px;font-weight:bold;color:#fff;cursor:pointer;background:linear-gradient(#ffa21f,#ff6a00);box-shadow:0 5px 0 #b34700;font-family:inherit}
+  .big{border:0;border-radius:18px;padding:12px 34px;margin-top:14px;font-size:24px;font-weight:bold;color:#fff;cursor:pointer;background:linear-gradient(#ffa21f,#ff6a00);box-shadow:0 5px 0 #b34700;font-family:inherit}
   .big:active{transform:translateY(3px);box-shadow:0 2px 0 #b34700}
   .big:disabled{background:linear-gradient(#d9c7a8,#bda982);box-shadow:0 5px 0 #8c7a58;cursor:default;opacity:.8}
   #qhead{display:flex;align-items:center;justify-content:center;gap:12px}
   #qnum{font-weight:bold;color:#c4631a;font-size:20px;letter-spacing:1px;text-transform:uppercase}
-  #qhint{font-size:17px;opacity:.75;margin-top:4px}
-  #qacorn{width:110px;height:110px}
-  #qtext{font-size:clamp(28px,5.2vw,42px);font-weight:bold;margin:18px 0 22px;line-height:1.25}
+  #qhint{font-size:16px;opacity:.8;margin-top:4px;max-width:480px}
+  #qhint div{text-wrap:balance;margin-top:2px}
+  #qacorn{width:96px;height:96px}
+  #qtext{font-size:clamp(25px,4.6vw,36px);font-weight:bold;margin:14px 0 18px;line-height:1.25}
   .blank{display:inline-block;min-width:120px;border-bottom:4px dashed var(--orange);color:var(--orange)}
   .blank.filled{border-bottom-style:solid;color:#1a9a3a}
   #qopts{display:grid;gap:16px;grid-template-columns:1fr 1fr}
-  .opt{border:0;border-radius:16px;padding:22px 10px;font-size:clamp(26px,5vw,36px);font-weight:bold;color:#fff;cursor:pointer;font-family:inherit}
+  .opt{border:0;border-radius:16px;padding:18px 10px;font-size:clamp(24px,4.4vw,32px);font-weight:bold;color:#fff;cursor:pointer;font-family:inherit}
   .opt.was{background:linear-gradient(#ffb04a,#e8832a);box-shadow:0 5px 0 #a85312}
   .opt.were{background:linear-gradient(#6fcf5a,#3f9a2f);box-shadow:0 5px 0 #25661a}
   .opt:active{transform:translateY(3px)}
@@ -58,22 +59,22 @@
   @keyframes shake{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
 
   /* ---- word-order board ---- */
-  #slots{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;padding:20px 14px;margin:18px 0 16px;border-radius:22px;background:#fff0d4;border:3px solid #e2b87a;min-height:112px}
+  #slots{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;align-items:center;padding:16px 12px;margin:14px 0 12px;border-radius:20px;background:#fff0d4;border:3px solid #e2b87a;min-height:96px}
   #slots.shake{animation:shake .35s}
   #slots.ok{background:#e4f7d6;border-color:#7cc96a}
-  .slot{min-width:96px;height:64px;border:3px dashed #d0a066;border-radius:14px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.5)}
+  .slot{min-width:84px;height:56px;border:3px dashed #d0a066;border-radius:14px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.5)}
   .slot.over{background:#ffe2a8;border-color:var(--orange)}
   .slot:has(.chip){border:0;background:none;min-width:0}
-  .dot{font-size:42px;font-weight:bold;color:var(--brown);align-self:flex-end;line-height:1;padding-bottom:4px}
-  #bank{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;min-height:72px;padding:8px}
-  .chip{display:inline-flex;align-items:center;justify-content:center;height:64px;padding:0 22px;border-radius:14px;font-size:clamp(24px,4.6vw,34px);font-weight:bold;color:#4a2a10;cursor:grab;touch-action:none;
+  .dot{font-size:36px;font-weight:bold;color:var(--brown);align-self:flex-end;line-height:1;padding-bottom:4px}
+  #bank{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;min-height:62px;padding:6px}
+  .chip{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 18px;border-radius:13px;font-size:clamp(21px,4vw,29px);font-weight:bold;color:#4a2a10;cursor:grab;touch-action:none;
         background:linear-gradient(#ffe3ae,#f0b45e);border:2px solid #b97a34;box-shadow:0 4px 0 #a5692a}
   .chip:active{cursor:grabbing}
   .chip.dragging{opacity:.25}
   .chip.ghost{position:fixed;z-index:50;pointer-events:none;transform:translate(-50%,-60%) rotate(-3deg) scale(1.08);box-shadow:0 10px 18px rgba(0,0,0,.3)}
   .chip.wrong{background:linear-gradient(#ffb3b3,#ee6b6b);border-color:#b02a2a;box-shadow:0 4px 0 #8a1a1a}
   .chip.locked{cursor:default;background:linear-gradient(#b8ef9f,#6cc552);border-color:#3f8a2a;box-shadow:0 4px 0 #2f6a1f}
-  #qfb{min-height:40px;margin-top:12px;font-size:24px;font-weight:bold}
+  #qfb{min-height:34px;margin-top:10px;font-size:22px;font-weight:bold}
   #qfb small{display:block;font-weight:normal;font-size:17px;opacity:.85;margin-top:2px}
   #qnext,#qcheck{display:none}
   #toast{position:fixed;left:50%;top:18px;transform:translateX(-50%) translateY(-120px);background:#fffaf0;color:#6b4020;font-weight:bold;padding:10px 20px;border-radius:999px;border:3px solid var(--orange);transition:transform .3s;z-index:20;font-size:18px;box-shadow:0 6px 20px rgba(0,0,0,.3);text-align:center}
@@ -117,7 +118,7 @@
 <!-- Question -->
 <div class="overlay" id="ovQ">
   <div class="card">
-    <div id="qhead"><canvas id="qacorn" width="80" height="80"></canvas><div><div id="qnum"></div><div id="qhint"></div></div></div>
+    <div id="qhead"><canvas id="qacorn" width="240" height="240"></canvas><div><div id="qnum"></div><div id="qhint"></div></div></div>
     <div id="qtext"></div>
     <div id="qopts"></div>
     <div id="qorder" style="display:none">
@@ -356,14 +357,14 @@ function openQuestion(){
   Q=qs[collected-1];
   $('qnum').textContent='Question '+collected+' / '+N_ACORN;
   $('qfb').innerHTML=''; $('qnext').style.display='none'; $('qcheck').style.display='none';
-  const qc=$('qacorn').getContext('2d'); qc.clearRect(0,0,80,80); sprite(qc,'acorn',40,40,72);
+  const qc=$('qacorn').getContext('2d'); qc.clearRect(0,0,240,240); sprite(qc,'acorn',120,120,228);
   if(Q.type==='order') initOrder(); else initChoose();
   $('ovQ').classList.add('show');
 }
 
 /* --- choose was / were --- */
 function initChoose(){
-  $('qhint').textContent='Choose was or were. Выбери was или were.';
+  $('qhint').innerHTML='<div>Choose was or were.</div><div>Выбери was или were.</div>';
   $('qorder').style.display='none'; $('qtext').style.display='block'; $('qopts').style.display='grid';
   $('qtext').innerHTML=Q.subj+' <span class="blank" id="blank">_____</span> '+Q.rest;
   const box=$('qopts'); box.innerHTML='';
@@ -389,7 +390,7 @@ function answerChoose(w,btn){
 
 /* --- put the words in order (drag and drop, or tap) --- */
 function initOrder(){
-  $('qhint').textContent='Put the words in order. Составь предложение: перетащи слова (или нажимай на них).';
+  $('qhint').innerHTML='<div>Put the words in order.</div><div>Составь предложение: перетащи слова (или нажимай на них).</div>';
   $('qtext').style.display='none'; $('qopts').style.display='none'; $('qorder').style.display='block';
   target=Q.sentence.replace(/\.$/,'').split(' ');
   chips=target.map((w,i)=>({id:i,w}));
